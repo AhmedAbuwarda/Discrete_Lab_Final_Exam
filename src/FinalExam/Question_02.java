@@ -17,11 +17,12 @@ public class Question_02 {
      */
     public static void Q2() {
 
-        // Create Sets
+        // Create Sets A , B , C
         Set<Integer> A = new HashSet<>();
         Set<Integer> B = new HashSet<>();
         Set<Integer> C = new HashSet<>();
 
+        // Add Numbers to Set A
         A.add(2);
         A.add(3);
         A.add(5);
@@ -30,6 +31,7 @@ public class Question_02 {
         A.add(8);
         A.add(11);
 
+        // Add Numbers to Set B
         B.add(2);
         B.add(3);
         B.add(5);
@@ -38,6 +40,7 @@ public class Question_02 {
         B.add(8);
         B.add(10);
 
+        // Add Numbers to Set C
         C.add(2);
         C.add(3);
         C.add(5);
@@ -46,10 +49,12 @@ public class Question_02 {
         C.add(8);
         C.add(12);
 
+        // Print Old Sets
         System.out.println("A = " + A);
         System.out.println("B = " + B);
         System.out.println("C = " + C);
 
+        // Create New Sets
         Set<Integer> ADiffB = new HashSet<>(A);
         ADiffB.removeAll(B);
         Set<Integer> ADiffC = new HashSet<>(A);
@@ -57,6 +62,7 @@ public class Question_02 {
         Set<Integer> BDiffC = new HashSet<>(B);
         BDiffC.removeAll(C);
 
+        // If Statement
         if (ADiffB.containsAll(ADiffC) && ADiffB.containsAll(BDiffC)) {
             System.out.println("A - B = A - C And B - C >> " + ADiffB + " = " + ADiffC + " = " + BDiffC);
         } else if (ADiffB.containsAll(ADiffC)) {
@@ -66,5 +72,6 @@ public class Question_02 {
         } else {
             System.out.println(ADiffB);
         }
+
     }
 }

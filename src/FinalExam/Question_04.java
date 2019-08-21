@@ -27,18 +27,26 @@ public class Question_04 {
      */
     public static void Q4() {
 
+        // Create Sets setA , setB
         Set<Set<String>> setA = getAllListOfCarsInExcel("Files\\carParkingA.xlsx");
         Set<Set<String>> setB = getAllListOfCarsInExcel("Files\\carParkingB.xlsx");
+
+        // Print Old Sets
         System.out.println("\n setA: " + setA);
         System.out.println("\n setB: " + setB);
+
         setA.retainAll(setB);
         System.out.println(setA.size() + " user have piles in the first and second");
+
     }
 
     private static Set<Set<String>> getAllListOfCarsInExcel(String file) {
 
+        // Create Sets setList , set
         Set<String> setList;
         Set<Set<String>> set = new HashSet<>();
+
+        // Try Catch Block
         try {
             FileInputStream excelFile2 = new FileInputStream(new File(file));
             Workbook workbook = new XSSFWorkbook(excelFile2);
@@ -48,15 +56,20 @@ public class Question_04 {
             for (Row currentRow : datatypeSheet) {
                 Iterator<Cell> cellIterator = currentRow.iterator();// the raw have many cell
                 setList = new HashSet<>();
+
+                // While Statement
                 while (cellIterator.hasNext()) {
                     Cell currentCell = cellIterator.next();
                     setList.add(String.valueOf(currentCell));
                 }
+
                 set.add(setList);
             }
+
         } catch (IOException e1) {
             e1.printStackTrace();
         }
+
         return set;
     }
 }

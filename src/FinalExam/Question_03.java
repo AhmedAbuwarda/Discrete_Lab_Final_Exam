@@ -17,22 +17,27 @@ public class Question_03 {
      */
     public static void Q3() {
 
+        // Create Sets R, A , B
         Set<Integer> R = new HashSet<Integer>();
         Set<Integer> A = new HashSet<Integer>();
         Set<Integer> B = new HashSet<Integer>();
 
+        // Add Numbers To Set A
         A.add(3);
         A.add(5);
         A.add(8);
 
+        // Add Numbers To Set B
         B.add(5);
         B.add(3);
         B.add(2);
 
+        // Add Numbers To Set R
         for (int i = 0; i < 10; i++) {
             R.add(i);
         }
 
+        // Create New Sets
         Set<Integer> AunionB = new HashSet<Integer>(A);
         AunionB.addAll(B);
 
@@ -48,6 +53,7 @@ public class Question_03 {
         Set<Integer> AinterB = new HashSet<Integer>(RremoveA);
         AinterB.retainAll(RremoveB);
 
+        // If Statement
         if (removeUnion.containsAll(AinterB)) {
             System.out.println("(A u B)\" = " + removeUnion);
             System.out.println("(A' u B') = " + AinterB);
@@ -55,6 +61,7 @@ public class Question_03 {
         } else {
             System.out.println("The formula is not true (!_!)");
         }
+
     }
     /**
      * Or you can use this code...
