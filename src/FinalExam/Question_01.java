@@ -22,7 +22,7 @@ public class Question_01 {
         int countSystemFrom = scan.nextInt();
         System.out.print("To ");//ex 2 - 8 - 10 - 16 
         int countSystemTo = scan.nextInt();
-        System.out.println("please! Enter number");
+        System.out.print("please! Enter number");
         String getNum = scan.next(); // 
         int num = 0;
 
