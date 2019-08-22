@@ -18,14 +18,14 @@ class Question_01 {
 
         // Reading The Data From The User.
         Scanner scan = new Scanner(System.in);
-        System.out.println("Please! Enter counting system");
-        System.out.print("From ");  //ex 2 - 8 - 10 - 16
+        System.out.println("Please! Enter counting system: ");
+        System.out.print("From: ");  //ex 2 - 8 - 10 - 16
         int countSystemFrom = scan.nextInt();
 
-        System.out.print("To ");    //ex 2 - 8 - 10 - 16
+        System.out.print("To: ");    //ex 2 - 8 - 10 - 16
         int countSystemTo = scan.nextInt();
 
-        System.out.print("please! Enter number");
+        System.out.print("please! Enter number: ");
         String getNum = scan.next();
 
         int num = 0;
@@ -89,13 +89,13 @@ class Question_01 {
 
         // If Statement.
         if (countSystemTo == 8) {
-            System.out.println(Integer.toOctalString(num));
+            System.out.println(Integer.toOctalString(num) + "\n");
         } else if (countSystemTo == 16) {
-            System.out.println(Integer.toHexString(num));
+            System.out.println(Integer.toHexString(num) + "\n");
         } else if (countSystemTo == 2) {
-            System.out.println(Integer.toBinaryString(num));
+            System.out.println(Integer.toBinaryString(num) + "\n");
         } else {
-            System.out.println(num);
+            System.out.println(num + "\n");
         }
 
     }
