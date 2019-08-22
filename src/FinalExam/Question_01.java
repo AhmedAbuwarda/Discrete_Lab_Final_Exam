@@ -7,15 +7,16 @@ package FinalExam;
 import java.util.Scanner;
 
 /**
- * @author Ahmed Abuwarda
+ * @author Ahmed Abuwarda.
  */
-public class Question_01 {
+class Question_01 {
 
     /**
-     * @return A number in different format
+     * THis Method Returns A number in different format.
      */
-    public static void Q1() {
+    static void Q1() {
 
+        // Reading The Data From The User.
         Scanner scan = new Scanner(System.in);
         System.out.println("Please! Enter counting system");
         System.out.print("From ");  //ex 2 - 8 - 10 - 16
@@ -29,10 +30,15 @@ public class Question_01 {
 
         int num = 0;
 
-        // Switch Case countSystemFrom
+        // Switch Case countSystemFrom.
         switch (countSystemFrom) {
+
             case 16:
+
+                // Try Catch Block.
                 try {
+
+                    // Try Catch Block.
                     num = Integer.parseInt(getNum, 16);
                     break;
                 } catch (Exception e) {
@@ -41,6 +47,8 @@ public class Question_01 {
                 }
 
             case 8:
+
+                // Try Catch Block.
                 try {
                     num = Integer.parseInt(getNum, 8);
                     break;
@@ -49,6 +57,8 @@ public class Question_01 {
                     break;
                 }
             case 2:
+
+                // Try Catch Block.
                 try {
                     num = Integer.parseInt(getNum, 2);
                     break;
@@ -57,6 +67,8 @@ public class Question_01 {
                     break;
                 }
             case 10:
+
+                // Try Catch Block.
                 try {
                     num = Integer.parseInt(getNum);
                     break;
@@ -64,12 +76,18 @@ public class Question_01 {
                     System.out.println("Error");
                     break;
                 }
+
+                // Default Block.
             default:
                 System.out.println("Error");
                 break;
+
         }
 
+        // Print The Result.
         System.out.print("The reasult is : ");
+
+        // If Statement.
         if (countSystemTo == 8) {
             System.out.println(Integer.toOctalString(num));
         } else if (countSystemTo == 16) {
@@ -81,4 +99,5 @@ public class Question_01 {
         }
 
     }
+
 }

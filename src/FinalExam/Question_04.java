@@ -18,20 +18,20 @@ import java.util.Iterator;
 import java.util.Set;
 
 /**
- * @author Ahmed Abuwarda
+ * @author Ahmed Abuwarda.
  */
-public class Question_04 {
+class Question_04 {
 
     /**
-     * @return Set from .xlsx file
+     * This Method Returns A Set from .xlsx file.
      */
-    public static void Q4() {
+    static void Q4() {
 
-        // Create Sets setA , setB
+        // Create Sets setA , setB.
         Set<Set<String>> setA = getAllListOfCarsInExcel("Files\\carParkingA.xlsx");
         Set<Set<String>> setB = getAllListOfCarsInExcel("Files\\carParkingB.xlsx");
 
-        // Print Old Sets
+        // Print Old Sets.
         System.out.println("\n setA: " + setA);
         System.out.println("\n setB: " + setB);
 
@@ -40,30 +40,40 @@ public class Question_04 {
 
     }
 
+    /**
+     *
+     * @param file Any .xlsx File.
+     * @return Set.
+     */
     private static Set<Set<String>> getAllListOfCarsInExcel(String file) {
 
-        // Create Sets setList , set
+        // Create Sets setList , set.
         Set<String> setList;
         Set<Set<String>> set = new HashSet<>();
 
-        // Try Catch Block
+        // Try Catch Block.
         try {
+
             FileInputStream excelFile2 = new FileInputStream(new File(file));
             Workbook workbook = new XSSFWorkbook(excelFile2);
             Sheet datatypeSheet = workbook.getSheetAt(0);
 
-            // this for one row from sheet
+            // this for one row from sheet.
             for (Row currentRow : datatypeSheet) {
+
                 Iterator<Cell> cellIterator = currentRow.iterator();// the raw have many cell
                 setList = new HashSet<>();
 
-                // While Statement
+                // While Statement.
                 while (cellIterator.hasNext()) {
+
                     Cell currentCell = cellIterator.next();
                     setList.add(String.valueOf(currentCell));
+
                 }
 
                 set.add(setList);
+
             }
 
         } catch (IOException e1) {
@@ -71,5 +81,7 @@ public class Question_04 {
         }
 
         return set;
+
     }
+
 }
