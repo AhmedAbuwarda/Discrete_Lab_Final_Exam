@@ -32,16 +32,15 @@ class Question_04 {
         Set<Set<String>> setB = getAllListOfCarsInExcel("Files\\carParkingB.xlsx");
 
         // Print Old Sets.
-        System.out.println("\n setA: " + setA);
-        System.out.println("\n setB: " + setB);
+        System.out.println("\n *** Question_04 ***\nsetA: " + setA);
+        System.out.println("\nsetB: " + setB);
 
         setA.retainAll(setB);
-        System.out.println(setA.size() + " user have piles in the first and second");
+        System.out.println("\n" + setA.size() + " user have piles in the first and second.");
 
     }
 
     /**
-     *
      * @param file Any .xlsx File.
      * @return Set.
      */

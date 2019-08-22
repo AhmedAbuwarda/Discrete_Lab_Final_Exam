@@ -55,11 +55,11 @@ class Question_03 {
 
         // If Statement To Print The Result.
         if (removeUnion.containsAll(AinterB)) {
-            System.out.println("(A u B)\" = " + removeUnion);
+            System.out.println("\n *** Question_03 ***\n(A u B)\" = " + removeUnion);
             System.out.println("(A' u B') = " + AinterB);
-            System.out.println("The formula is true (^_^)");
+            System.out.println("\nThe formula is true (^_^)");
         } else {
-            System.out.println("The formula is not true (!_!)");
+            System.out.println("\nThe formula is not true (!_!)");
         }
 
     }
