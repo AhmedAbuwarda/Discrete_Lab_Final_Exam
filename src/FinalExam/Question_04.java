@@ -2,6 +2,7 @@
  * To change this template file, choose Settings | Editor | File and Code Templates
  * and change the template in the editor.
  */
+
 package FinalExam;
 
 import org.apache.poi.ss.usermodel.Cell;
@@ -22,9 +23,7 @@ import java.util.Set;
  */
 class Question_04 {
 
-    /**
-     * This Method Returns A Set from .xlsx file.
-     */
+    // This Method Returns A Set from .xlsx file.
     static void Q4() {
 
         // Create Sets setA , setB.

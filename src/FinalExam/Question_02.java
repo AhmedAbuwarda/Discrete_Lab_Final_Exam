@@ -2,6 +2,7 @@
  * To change this template file, choose Settings | Editor | File and Code Templates
  * and change the template in the editor.
  */
+
 package FinalExam;
 
 import java.util.HashSet;
@@ -12,9 +13,7 @@ import java.util.Set;
  */
 class Question_02 {
 
-    /**
-     * This Method Returns Group Of Sets.
-     */
+    // This Method Returns Group Of Sets.
     static void Q2() {
 
         // Create Sets A , B , C.

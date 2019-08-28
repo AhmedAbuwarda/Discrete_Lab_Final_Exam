@@ -2,6 +2,7 @@
  * To change this template file, choose Settings | Editor | File and Code Templates
  * and change the template in the editor.
  */
+
 package FinalExam;
 
 import java.util.Scanner;
@@ -11,9 +12,7 @@ import java.util.Scanner;
  */
 class Question_01 {
 
-    /**
-     * THis Method Returns A number in different format.
-     */
+    // This Method Returns A number in different format.
     static void Q1() {
 
         // Reading The Data From The User.
